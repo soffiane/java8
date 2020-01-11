@@ -1,6 +1,5 @@
 package Optional;
 
-import com.sun.deploy.net.MessageHeader;
 import jdk.internal.org.objectweb.asm.tree.analysis.Value;
 
 import java.util.ArrayList;
@@ -88,9 +87,11 @@ public class OptionalUsages {
     }
 
     private static Integer complex() {
+        return 0;
     }
 
     private static Integer complexCalculation() {
+        return 0;
     }
 
     private static void doSomething(Value value) {
