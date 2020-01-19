@@ -20,11 +20,11 @@ public class LambdaBasicExemple {
                 .filter(x -> x.getKey().contains("Soffiane"))
                 //collect prend le resultat du filter() et le convertit en autre chose
                 //ici en Map
-                .collect(Collectors.toMap(p -> p.getKey(), p -> p.getValue()));
+                .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue));
 
         filteredNumbers.forEach((key,value) -> {
             System.out.println("Name "+key+" : ");
-            value.stream().forEach(System.out::println);
+            value.forEach(System.out::println);
         });
     }
 }

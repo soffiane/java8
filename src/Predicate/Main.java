@@ -10,10 +10,6 @@ public class Main {
         cat.ajoute(new Article("Cahier", 2));
 
         //on cherche les articles qui coutent moins de 6
-        List<Article> listResultat = cat.rechercheArticlePrix(a -> a.getPrix() < 6);
-
-        for(Article i : listResultat){
-            System.out.println("Article : "+i.getNom());
-        }
+        cat.rechercheArticlePrix(a -> a.getPrix() < 6).forEach(i -> System.out.println("Article : "+i.getNom()));
     }
 }

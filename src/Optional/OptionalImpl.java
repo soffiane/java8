@@ -26,7 +26,7 @@ public class OptionalImpl {
         } else {
             //situation normale
         }*/
-        Optional données = trouver("hello");
+        Optional<Integer> données = trouver("hello");
         if(données.isPresent()){
             System.out.println(données.get());
         } else {
@@ -44,8 +44,8 @@ public class OptionalImpl {
         }
     }*/
 
-    private static Optional trouver(String chaine) {
-        if(chaine == "bonjour") {
+    private static Optional<Integer> trouver(String chaine) {
+        if("bonjour".equals(chaine)) {
             return Optional.of(1);
         }
         else {
